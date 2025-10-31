@@ -19,7 +19,7 @@ for (let i=0;i<N;i++){
     r: Math.random()*1.6+0.4,
     dx: (Math.random()-0.5)*0.2,
     dy: (Math.random()-0.5)*0.2,
-    color: Math.random()>0.8 ? 'rgba(230,0,0,0.9)' : 'rgba(255,255,255,0.75)',
+    color: 'rgba(255,255,255,0.75)',
     glow: Math.random()*10+6
   });
 }
@@ -115,7 +115,7 @@ function filterProducts(){
     if(currentCategory === 'all'){
       show = true;
     } else if(currentCategory === 'hombre'){
-      show = ['camisetasH','busosH','conjuntosH','gorrash','accesoriosH','zapatosH'].includes(cat);
+      show = ['camisetasH','busosH','conjuntosH','gorrasH','accesoriosH','zapatosH'].includes(cat);
     } else if(currentCategory === 'mujer'){
       show = ['topsM','cropM','accesoriosM'].includes(cat);
     } else if(currentCategory === 'unisex'){

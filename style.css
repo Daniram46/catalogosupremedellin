@@ -5,10 +5,11 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: radial-gradient(#000, #000);
+  background: transparent;
 }
 
 /* ---------- Reset y tipografía ---------- */
+html { background: linear-gradient(to bottom, #e60000, #c10000); }
 * { box-sizing: border-box; margin:0; padding:0; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; }
 body { color:#000; background:transparent; }
 
@@ -244,4 +245,105 @@ body { color:#000; background:transparent; }
     height: 45px;
     font-size: 18px;
   }
+}
+
+/* Mobile and Tablet Responsive */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .site-header {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .logo {
+    justify-content: center;
+  }
+  .logo h1 {
+    font-size: 1.1rem;
+  }
+
+  /* Nav adjustments */
+  .main-nav .nav-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .nav-tab {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+  #searchInput {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Subcategories */
+  .subcategories {
+    padding: 10px 15px;
+    gap: 8px;
+  }
+  .subcategory-btn {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Main content */
+  .main {
+    padding: 15px;
+  }
+  .products-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  /* Product cards */
+  .product-card {
+    height: auto;
+    min-height: 350px;
+    padding: 12px;
+  }
+  .image-carousel {
+    height: 200px;
+  }
+  .product-card h3 {
+    font-size: 1rem;
+  }
+  .product-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Modals */
+  .modal-content {
+    padding: 18px;
+    width: 95%;
+    max-width: none;
+  }
+  .image-modal img {
+    max-width: 95%;
+    max-height: 95%;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Floating buttons */
+  .floating-buttons {
+    bottom: 10px;
+    right: 10px;
+  }
+  .floating-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+
+.error-img {
+  opacity: 0.4;
+  border: 2px dashed gray !important;
+  filter: grayscale(100%);
 }
